@@ -110,7 +110,7 @@ public class Shell {
                 String  Status = str.substring(str.indexOf("Status")+"Status".length(),str.length());
                 Map map = new HashMap();
                 map.put("EXTRACT",EXTRACT.replaceAll(" ",""));
-                map.put("LastStarted",LastStarted.replaceAll(" ",""));
+                map.put("LastStarted",LastStarted.replaceAll("  ",""));
                 map.put("Status",Status.replaceAll(" ",""));
                 list.add(map);
             }
