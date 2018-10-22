@@ -101,6 +101,8 @@ public class Shell {
        // shell.execute("su - oracle <<! ./u01/app/ogg/ggsci <<! info all ");
         shell.execute("./../u01/app/ogg/test.sh");
         ArrayList<String> stdout = shell.getStandardOutput();
+        if(stdout.size()<=0) return;
+        System.out.println("---stdout---\n"+stdout.toString());
         List list = new ArrayList<>();
         for (String str : stdout) {
             if(str.startsWith("EXTRACT")){
